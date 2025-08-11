@@ -1,0 +1,14 @@
+name: 機能追加
+description: 新しい機能を提案
+title: ""
+labels: ["enhancement"]
+assignees:
+  - shimomo
+body:
+  - type: textarea
+    id: enhancement
+    attributes:
+      label: 概要
+      placeholder: 追加したい機能を簡単に記述
+    validations:
+      required: true
