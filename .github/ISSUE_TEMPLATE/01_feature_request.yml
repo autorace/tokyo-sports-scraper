@@ -1,9 +1,5 @@
 name: 機能追加
 description: 新しい機能を提案
-title: "ここに新しい機能のタイトルを入力"
-labels: ["enhancement"]
-assignees:
-  - shimomo
 body:
   - type: textarea
     id: enhancement
@@ -12,3 +8,8 @@ body:
       placeholder: ここに新しい機能の概要を入力
     validations:
       required: true
+assignees:
+  - shimomo
+labels: ["enhancement"]
+title: ここに新しい機能のタイトルを入力
+type: Feature
