@@ -1,6 +1,6 @@
 name: 機能追加
 description: 新しい機能を提案
-title: 機能追加
+title: "ここに新しい機能のタイトルを入力"
 labels: ["enhancement"]
 assignees:
   - shimomo
@@ -9,6 +9,6 @@ body:
     id: enhancement
     attributes:
       label: 概要
-      placeholder: 追加したい機能を簡単に記述
+      placeholder: ここに新しい機能の概要を入力
     validations:
       required: true
