@@ -1,7 +1,0 @@
-blank_issues_enabled: false
-issue_templates:
-  - name: 機能追加
-    about: 新しい機能を提案するときはこちらから
-    title: "[機能]"
-    labels: ["enhancement"]
-    assignees: []
