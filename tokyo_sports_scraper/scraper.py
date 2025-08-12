@@ -2,13 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from .builder import build_race_url
 from .extractors import (
-    extract_race_title,
-    extract_race_subtitle,
-    extract_race_weather,
-    extract_race_temperature,
-    extract_race_humidity,
-    extract_race_pavement_temperature,
-    extract_race_track_condition,
+    RaceInfo,
     RiderInfo,
 )
 from .model import Rider, Race
@@ -28,6 +22,7 @@ def scrape(race_date: str, race_circuit_number: int, race_number: int) -> Race:
     response = requests.get(build_race_url(race_date, race_circuit_number, race_number))
     response.raise_for_status()
     soup = BeautifulSoup(response.text, 'lxml')
+    race_info = RaceInfo(soup)
 
     riders: list[Rider] = []
     for i in range(1, 9):
@@ -52,12 +47,12 @@ def scrape(race_date: str, race_circuit_number: int, race_number: int) -> Race:
             ))
 
     return Race(
-        title=extract_race_title(soup),
-        subtitle=extract_race_subtitle(soup),
-        weather=extract_race_weather(soup),
-        temperature=extract_race_temperature(soup),
-        humidity=extract_race_humidity(soup),
-        pavement_temperature=extract_race_pavement_temperature(soup),
-        track_condition=extract_race_track_condition(soup),
+        title=race_info.title(),
+        subtitle=race_info.subtitle(),
+        weather=race_info.weather(),
+        temperature=race_info.temperature(),
+        humidity=race_info.humidity(),
+        pavement_temperature=race_info.pavement_temperature(),
+        track_condition=race_info.track_condition(),
         riders=riders,
     )
