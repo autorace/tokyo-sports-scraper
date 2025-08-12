@@ -13,6 +13,7 @@ class Rider:
     handicap: float | None
     trial_time: float | None
     trial_deviation: float | None # 試走偏差
+    average_trial_time: float | None
 
 @dataclass
 class Race:

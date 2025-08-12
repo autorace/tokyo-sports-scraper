@@ -19,6 +19,7 @@ from .extractors import (
     extract_race_rider_handicap,
     extract_race_rider_trial_time,
     extract_race_rider_trial_deviation,
+    extract_race_rider_average_trial_time,
 )
 from .model import Rider, Race
 
@@ -54,6 +55,7 @@ def scrape(race_date: str, race_circuit_number: int, race_number: int) -> Race:
                 handicap=extract_race_rider_handicap(soup, i),
                 trial_time=extract_race_rider_trial_time(soup, i),
                 trial_deviation=extract_race_rider_trial_deviation(soup, i),
+                average_trial_time=extract_race_rider_average_trial_time(soup, i),
             ))
 
     return Race(
