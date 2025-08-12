@@ -19,6 +19,9 @@ from .rider_info import (
     extract_race_rider_handicap,
     extract_race_rider_trial_time,
     extract_race_rider_trial_deviation,
+    extract_race_rider_average_trial_time,
+    extract_race_rider_average_race_time,
+    extract_race_rider_fastest_race_time,
 )
 
 __all__ = [
@@ -39,4 +42,7 @@ __all__ = [
     'extract_race_rider_handicap',
     'extract_race_rider_trial_time',
     'extract_race_rider_trial_deviation',
+    'extract_race_rider_average_trial_time',
+    'extract_race_rider_average_race_time',
+    'extract_race_rider_fastest_race_time',
 ]

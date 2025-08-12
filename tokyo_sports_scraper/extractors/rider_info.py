@@ -181,3 +181,57 @@ def extract_race_rider_trial_deviation(soup: BeautifulSoup, rider_number: int) -
         return float(text) if text else None
     except (AttributeError, ValueError):
         return None
+
+def extract_race_rider_average_trial_time(soup: BeautifulSoup, rider_number: int) -> float | None:
+    """
+    選手の車番に対応する平均試走タイムを抽出する。
+
+    Parameters:
+    - soup: BeautifulSoupオブジェクト
+    - rider_number: 選手の車番（int）
+
+    Returns:
+    - 選手の平均試走タイム（float）または None
+    """
+    try:
+        selector = f'tr.player-color-{rider_number}:nth-of-type({rider_number * 3 - 2}) td.race-table__txt:nth-of-type(5)'
+        text = get_text_by_selector(soup, selector)
+        return float(text) if text else None
+    except (AttributeError, ValueError):
+        return None
+
+def extract_race_rider_average_race_time(soup: BeautifulSoup, rider_number: int) -> float | None:
+    """
+    選手の車番に対応する平均競走タイムを抽出する。
+
+    Parameters:
+    - soup: BeautifulSoupオブジェクト
+    - rider_number: 選手の車番（int）
+
+    Returns:
+    - 選手の平均競走タイム（float）または None
+    """
+    try:
+        selector = f'tr.player-color-{rider_number}:nth-of-type({rider_number * 3 - 1}) td.race-table__txt:nth-of-type(2)'
+        text = get_text_by_selector(soup, selector)
+        return float(text) if text else None
+    except (AttributeError, ValueError):
+        return None
+
+def extract_race_rider_fastest_race_time(soup: BeautifulSoup, rider_number: int) -> float | None:
+    """
+    選手の車番に対応する最高競走タイムを抽出する。
+
+    Parameters:
+    - soup: BeautifulSoupオブジェクト
+    - rider_number: 選手の車番（int）
+
+    Returns:
+    - 選手の最高競走タイム（float）または None
+    """
+    try:
+        selector = f'tr.player-color-{rider_number}:nth-of-type({rider_number * 3}) td.race-table__txt:nth-of-type(2)'
+        text = get_text_by_selector(soup, selector)
+        return float(text) if text else None
+    except (AttributeError, ValueError):
+        return None
