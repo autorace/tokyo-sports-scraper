@@ -17,10 +17,15 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install build tools
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install build twine
+          pip install build twine toml
+
+      - name: Sync version in pyproject.toml with git tag
+        run: python sync_version.py
+        env:
+          GITHUB_REF: ${{ github.ref }}
 
       - name: Build package
         run: python -m build
