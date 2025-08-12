@@ -8,21 +8,7 @@ from .race_info import (
     extract_race_track_condition,
 )
 
-from .rider_info import (
-    extract_race_rider_name,
-    extract_race_rider_locker_ground,
-    extract_race_rider_registration_term,
-    extract_race_rider_age,
-    extract_race_rider_bike_class,
-    extract_race_rider_rank,
-    extract_race_rider_points,
-    extract_race_rider_handicap,
-    extract_race_rider_trial_time,
-    extract_race_rider_trial_deviation,
-    extract_race_rider_average_trial_time,
-    extract_race_rider_average_race_time,
-    extract_race_rider_fastest_race_time,
-)
+from .rider_info import RiderInfo
 
 __all__ = [
     'extract_race_title',
@@ -32,17 +18,5 @@ __all__ = [
     'extract_race_humidity',
     'extract_race_pavement_temperature',
     'extract_race_track_condition',
-    'extract_race_rider_name',
-    'extract_race_rider_locker_ground',
-    'extract_race_rider_registration_term',
-    'extract_race_rider_age',
-    'extract_race_rider_bike_class',
-    'extract_race_rider_rank',
-    'extract_race_rider_points',
-    'extract_race_rider_handicap',
-    'extract_race_rider_trial_time',
-    'extract_race_rider_trial_deviation',
-    'extract_race_rider_average_trial_time',
-    'extract_race_rider_average_race_time',
-    'extract_race_rider_fastest_race_time',
+    'RiderInfo',
 ]
