@@ -4,14 +4,16 @@
 [![publish](https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml/badge.svg)](https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml)
 ![issues](https://img.shields.io/github/issues/autorace/tokyo-sports-scraper)
 ![pull requests](https://img.shields.io/github/issues-pr/autorace/tokyo-sports-scraper)
-[![license](https://img.shields.io/github/license/autorace/tokyo-sports-scraper)](LICENSE)
 [![last commit](https://img.shields.io/github/last-commit/autorace/tokyo-sports-scraper)](https://github.com/autorace/tokyo-sports-scraper/commits/main)
+[![pypi](https://img.shields.io/pypi/v/autorace-tokyo-sports-scraper)](https://pypi.org/project/autorace-tokyo-sports-scraper/)
+[![python](https://img.shields.io/badge/python-%3E%3D3.10-blue)](https://pypi.org/project/autorace-tokyo-sports-scraper/)
+[![license](https://img.shields.io/github/license/autorace/tokyo-sports-scraper)](LICENSE)
 
 東京スポーツのオートレース情報をスクレイピングするライブラリです。
 
 ## インストール
 ```bash
-pip install tokyo-sports-scraper
+pip install autorace-tokyo-sports-scraper
 ```
 
 ## 使い方
