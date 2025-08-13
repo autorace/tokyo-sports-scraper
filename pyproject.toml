@@ -11,7 +11,7 @@ where = ["."]
 [project]
 name = "autorace-tokyo-sports-scraper"
 version = "0.1.0"
-description = "東京スポーツのオートレース情報をスクレイピングするライブラリ"
+description = "東京スポーツのオートレース情報を取得するスクレイピングライブラリ"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
