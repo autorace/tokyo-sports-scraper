@@ -1,15 +1,38 @@
-# Tokyo Sports Scraper
+<h1 align="center">
+  Tokyo Sports Scraper
+</h1>
 
-[![tests](https://github.com/autorace/tokyo-sports-scraper/actions/workflows/tests.yml/badge.svg)](https://github.com/autorace/tokyo-sports-scraper/actions/workflows/tests.yml)
-[![publish](https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml/badge.svg)](https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml)
-![issues](https://img.shields.io/github/issues/autorace/tokyo-sports-scraper)
-![pull requests](https://img.shields.io/github/issues-pr/autorace/tokyo-sports-scraper)
-[![last commit](https://img.shields.io/github/last-commit/autorace/tokyo-sports-scraper)](https://github.com/autorace/tokyo-sports-scraper/commits/main)
-[![pypi](https://img.shields.io/pypi/v/autorace-tokyo-sports-scraper)](https://pypi.org/project/autorace-tokyo-sports-scraper/)
-[![python](https://img.shields.io/badge/python-%3E%3D3.10-blue)](https://pypi.org/project/autorace-tokyo-sports-scraper/)
-[![license](https://img.shields.io/github/license/autorace/tokyo-sports-scraper)](LICENSE)
+<div align="center">
+  <a href="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/tests.yml">
+    <img src="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/tests.yml/badge.svg"/>
+  </a>
+  <a href="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml">
+    <img src="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml/badge.svg"/>
+  </a>
+  <a href="https://github.com/autorace/tokyo-sports-scraper/issues">
+    <img src="https://img.shields.io/github/issues/autorace/tokyo-sports-scraper"/>
+  </a>
+  <a href="https://github.com/autorace/tokyo-sports-scraper/pulls">
+    <img src="https://img.shields.io/github/issues-pr/autorace/tokyo-sports-scraper"/>
+  </a>
+  <a href="https://github.com/autorace/tokyo-sports-scraper/commits/main">
+    <img src="https://img.shields.io/github/last-commit/autorace/tokyo-sports-scraper"/>
+  </a>
 
-東京スポーツのオートレース情報をスクレイピングするライブラリです。
+  <a href="https://pypi.org/project/autorace-tokyo-sports-scraper/">
+    <img src="https://img.shields.io/pypi/v/autorace-tokyo-sports-scraper"/>
+  </a>
+  <a href="https://pypi.org/project/autorace-tokyo-sports-scraper/">
+    <img src="https://img.shields.io/badge/python-%3E%3D3.10-blue"/>
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/github/license/autorace/tokyo-sports-scraper"/>
+  </a>
+</div>
+
+<p align="center">
+  東京スポーツのオートレース情報を取得するスクレイピングライブラリ
+</p>
 
 ## インストール
 ```bash
