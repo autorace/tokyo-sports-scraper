@@ -14,6 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -44,10 +46,17 @@ jobs:
         run: |
           CURRENT_TAG=${GITHUB_REF#refs/tags/}
           PREV_TAG=$(git tag --sort=-creatordate | grep -v "^$CURRENT_TAG$" | head -n 1)
-          NOTES=$(git log ${PREV_TAG}..${CURRENT_TAG} --pretty=format:"- %s")
-          if [ -z "$NOTES" ]; then
-            NOTES="No changes since last release."
+          echo "DEBUG: CURRENT_TAG=$CURRENT_TAG, PREV_TAG=$PREV_TAG"
+
+          if [ -z "$PREV_TAG" ]; then
+            NOTES="First release."
+          else
+            NOTES=$(git log ${PREV_TAG}..${CURRENT_TAG} --pretty=format:"- %s (%an, %ad)" --date=short)
+            if [ -z "$NOTES" ]; then
+              NOTES="No changes since last release."
+            fi
           fi
+
           echo "notes<<EOF" >> $GITHUB_OUTPUT
           echo "$NOTES" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
