@@ -25,3 +25,8 @@ dependencies = [
     "python-dateutil",
     "requests"
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
