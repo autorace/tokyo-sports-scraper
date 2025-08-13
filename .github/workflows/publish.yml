@@ -42,8 +42,9 @@ jobs:
       - name: Generate release notes
         id: release_notes
         run: |
-          PREV_TAG=$(git describe --tags --abbrev=0 ${GITHUB_REF}^)
-          NOTES=$(git log ${PREV_TAG}..${GITHUB_REF} --pretty=format:"- %s")
+          CURRENT_TAG=${GITHUB_REF#refs/tags/}
+          PREV_TAG=$(git tag --sort=-creatordate | grep -v "^$CURRENT_TAG$" | head -n 1)
+          NOTES=$(git log ${PREV_TAG}..${CURRENT_TAG} --pretty=format:"- %s")
           if [ -z "$NOTES" ]; then
             NOTES="No changes since last release."
           fi
