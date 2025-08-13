@@ -3,31 +3,15 @@
 </h1>
 
 <div align="center">
-  <a href="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/tests.yml">
-    <img src="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/tests.yml/badge.svg">
-  </a>
-  <a href="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml">
-    <img src="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml/badge.svg">
-  </a>
-  <a href="https://github.com/autorace/tokyo-sports-scraper/issues">
-    <img src="https://img.shields.io/github/issues/autorace/tokyo-sports-scraper">
-  </a>
-  <a href="https://github.com/autorace/tokyo-sports-scraper/pulls">
-    <img src="https://img.shields.io/github/issues-pr/autorace/tokyo-sports-scraper">
-  </a>
-  <a href="https://github.com/autorace/tokyo-sports-scraper/commits/main">
-    <img src="https://img.shields.io/github/last-commit/autorace/tokyo-sports-scraper">
-  </a>
+  <a href="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/tests.yml"><img src="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/tests.yml/badge.svg"></a>
+  <a href="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml"><img src="https://github.com/autorace/tokyo-sports-scraper/actions/workflows/publish.yml/badge.svg"></a>
+  <a href="https://github.com/autorace/tokyo-sports-scraper/issues"><img src="https://img.shields.io/github/issues/autorace/tokyo-sports-scraper"></a>
+  <a href="https://github.com/autorace/tokyo-sports-scraper/pulls"><img src="https://img.shields.io/github/issues-pr/autorace/tokyo-sports-scraper"></a>
+  <a href="https://github.com/autorace/tokyo-sports-scraper/commits/main"><img src="https://img.shields.io/github/last-commit/autorace/tokyo-sports-scraper"></a>
   <br>
-  <a href="https://pypi.org/project/autorace-tokyo-sports-scraper/">
-    <img src="https://img.shields.io/pypi/v/autorace-tokyo-sports-scraper">
-  </a>
-  <a href="https://pypi.org/project/autorace-tokyo-sports-scraper/">
-    <img src="https://img.shields.io/badge/python-%3E%3D3.10-blue">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/github/license/autorace/tokyo-sports-scraper">
-  </a>
+  <a href="https://pypi.org/project/autorace-tokyo-sports-scraper/"><img src="https://img.shields.io/pypi/v/autorace-tokyo-sports-scraper"></a>
+  <a href="https://pypi.org/project/autorace-tokyo-sports-scraper/"><img src="https://img.shields.io/badge/python-%3E%3D3.10-blue"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/autorace/tokyo-sports-scraper"></a>
 </div>
 
 <br>
