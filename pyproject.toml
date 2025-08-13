@@ -9,7 +9,7 @@ build-backend = "setuptools.build_meta"
 where = ["."]
 
 [project]
-name = "tokyo-sports-scraper"
+name = "autorace-tokyo-sports-scraper"
 version = "0.1.0"
 description = "東京スポーツのオートレース情報をスクレイピングするライブラリ"
 readme = "README.md"
