@@ -39,11 +39,27 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: twine upload dist/*
 
+      - name: Generate release notes
+        id: release_notes
+        run: |
+          PREV_TAG=$(git describe --tags --abbrev=0 ${GITHUB_REF}^)
+          NOTES=$(git log ${PREV_TAG}..${GITHUB_REF} --pretty=format:"- %s")
+          if [ -z "$NOTES" ]; then
+            NOTES="No changes since last release."
+          fi
+          echo "notes<<EOF" >> $GITHUB_OUTPUT
+          echo "$NOTES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
           tag_name: ${{ github.ref_name }}
-          body: "Release version ${{ github.ref_name }}."
+          body: |
+            Release version ${{ github.ref_name }}
+
+            Changes since last release:
+            ${{ steps.release_notes.outputs.notes }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
