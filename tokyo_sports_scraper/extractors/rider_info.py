@@ -1,6 +1,6 @@
 import re
 from bs4 import BeautifulSoup
-from .utils import get_text_by_selector
+from .utils import get_text_by_selector, count_weather_predictions
 
 class RiderInfo:
     def __init__(self, soup: BeautifulSoup, rider_number: int):
@@ -26,6 +26,18 @@ class RiderInfo:
         - テキスト（str）または None
         """
         return get_text_by_selector(self.soup, selector)
+
+    def _count_weather_predictions(self) -> int:
+        """
+        晴予想と雨予想の項目数を返す。
+
+        Parameters:
+        - soup: BeautifulSoupオブジェクト
+
+        Returns:
+        - 項目数（int）または None
+        """
+        return count_weather_predictions(self.soup)
 
     def name(self) -> str | None:
         """
@@ -133,7 +145,7 @@ class RiderInfo:
         - 選手のハンデ（int）または None
         """
         try:
-            selector = f'tr.player-color-{self.rider_number}:nth-of-type({self.rider_number * 3 - 2}) td.race-table__txt:nth-of-type(4)'
+            selector = f'tr.player-color-{self.rider_number}:nth-of-type({self.rider_number * 3 - 2}) td.race-table__txt:nth-of-type({self._count_weather_predictions() + 2})'
             text = self._get_text_by_selector(selector)
             return int(text) if text else None
         except (AttributeError, ValueError):
@@ -175,7 +187,7 @@ class RiderInfo:
         - 選手の平均試走タイム（float）または None
         """
         try:
-            selector = f'tr.player-color-{self.rider_number}:nth-of-type({self.rider_number * 3 - 2}) td.race-table__txt:nth-of-type(5)'
+            selector = f'tr.player-color-{self.rider_number}:nth-of-type({self.rider_number * 3 - 2}) td.race-table__txt:nth-of-type({self._count_weather_predictions() + 3})'
             text = self._get_text_by_selector(selector)
             return float(text) if text else None
         except (AttributeError, ValueError):
